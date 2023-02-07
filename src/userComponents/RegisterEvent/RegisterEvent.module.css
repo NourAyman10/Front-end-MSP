@@ -1,0 +1,324 @@
+:root {
+    --mainRed: #f25123;
+    --mainGreen: #7fba00;
+    --mainBlue: #02a3f1;
+    --errorColor: rgb(247, 92, 97);
+    --glassColor: rgba(255, 255, 255, 0.07);
+    --borderRadius: 20px;
+}
+
+
+/* start background  */
+
+.background {
+    position: absolute;
+    width: 370px;
+    height: 480px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shape {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 -6px 4px rgba(0, 0, 0, 0.12) inset, 5px 1px 4px rgba(0, 0, 0, 0.1) inset, 0px 4px 40px #0b2a38;
+    animation-name: floating;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.shape:first-child {
+    background-image: linear-gradient(var(--mainRed), #b4300a);
+    right: -10px;
+    top: -10px;
+    height: 26px;
+    width: 26px;
+    animation-duration: 3s;
+}
+
+.shape:nth-child(2) {
+    background-image: linear-gradient(var(--mainGreen), #4b6b05);
+    right: -30px;
+    bottom: -30px;
+    height: 53px;
+    width: 53px;
+    animation-duration: 4s;
+}
+
+.shape:nth-child(3) {
+    background-image: linear-gradient(var(--mainBlue), #0b6c9d);
+    left: -60px;
+    top: -60px;
+    height: 93px;
+    width: 93px;
+    animation-duration: 5s;
+}
+
+
+/* end background  */
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+form.registerEventForm {
+    width: 40%;
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    overflow: auto;
+    transform: translate(-50%, -50%);
+    border-radius: var(--borderRadius);
+    background-color: var(--glassColor);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+
+/* start login header */
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 20px;
+}
+
+.headerContainer div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    width: 80px;
+}
+
+.communityName p {
+    font-size: 22px;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.communityName p:first-child {
+    font-weight: bold;
+}
+
+
+/* end login header */
+
+
+/* start general input style  */
+
+.registerEventForm input {
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+    height: 100%;
+    caret-color: white;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+}
+
+.registerEventForm input:focus {
+    outline: none;
+}
+
+.registerEventForm label>* {
+    margin: 5px 10px 0;
+}
+.registerEventForm input:focus+label>* {
+    fill: white;
+}
+
+.registerEventForm input:not(:placeholder-shown)+label>* {
+    fill: white;
+}
+
+.registerEventForm input:-webkit-autofill,
+.registerEventForm input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.dataEntry{
+    width: 100%;
+    display: flex;
+    background-color: var(--glassColor);
+    margin: 20px 0 0;
+    padding: 10px;
+    border-radius: 30px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+    caret-color: white;
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+}
+
+option {
+    background-color: #0c0c0cbd;
+    padding: 5px 20px;
+}
+
+.errorMessage {
+    color: var(--errorColor);
+    text-align: center;
+    font-size: 12px;
+}
+
+.registerSuccessfully {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    background-color: #0c0c0cbd;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.massageContainer {
+    position: absolute;
+    background-color: #0c0c0c93;
+    width: 100vw;
+    height: 100vh;
+}
+
+.registerSuccessfully p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2cda94;
+}
+
+.errorText {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #e25b5b !important;
+}
+
+.registerSuccessfully button{
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 30px;
+    background-image: linear-gradient(#db4d25, #cb5331);
+    box-shadow: 0 -4px 4px #bd401d inset, 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+}
+
+.home {
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(#db4d25, #cb5331);
+    box-shadow: 0 -4px 4px #bd401d inset, 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+}
+
+.home .icon {
+    fill: #fff;
+}
+
+
+/* end general input style  */
+
+
+/* start icons */
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: rgb(145, 145, 145);
+}
+
+.yearIcon {
+    fill: white;
+}
+
+
+/* end icons */
+
+.loginBtn {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+    background-image: linear-gradient(#db4d25, #cb5331);
+    box-shadow: 0 -4px 4px #bd401d inset, 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+}
+
+.loginBtn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 769px) {
+    form.registerEventForm {
+        max-height: 90%;
+        width: 80%;
+    }
+
+    .registerEventForm textarea {
+        height: 70px;
+    }  
+}
+
+@media (max-width: 500px) {
+    .background {
+        width: 200px;
+        height: 500px;
+    }
+    
+    .registerEventForm input {
+        font-size: 16px;
+    }
+    
+    select {
+        font-size: 16px;
+    }
+
+    form.registerEventForm .question .type .choices {
+        grid-template-columns: 1fr;
+    } 
+
+    .communityName {
+        display: none;
+    }
+
+    .logoImage {
+        width: 50px;
+    }
+}

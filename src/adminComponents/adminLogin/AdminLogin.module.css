@@ -1,0 +1,268 @@
+:root {
+    --mainRed: #f25123;
+    --mainGreen: #7fba00;
+    --mainBlue: #02a3f1;
+    --errorColor: rgba(247, 92, 97, 0.5);
+    --glassColor: rgba(255, 255, 255, 0.07);
+    --borderRadius: 20px;
+}
+
+
+/* start background  */
+
+.background {
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shape {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 -6px 4px rgba(0, 0, 0, 0.12) inset, 5px 1px 4px rgba(0, 0, 0, 0.1) inset;
+}
+
+.shape:first-child {
+    background-image: linear-gradient(var(--mainRed), #b4300a);
+    right: -30px;
+    top: -10px;
+    height: 26px;
+    width: 26px;
+}
+
+.shape:nth-child(2) {
+    background-image: linear-gradient(var(--mainGreen), #4b6b05);
+    right: -30px;
+    bottom: -50px;
+    height: 53px;
+    width: 53px;
+}
+
+.shape:nth-child(3) {
+    background-image: linear-gradient(var(--mainBlue), #0b6c9d);
+    left: -60px;
+    top: -60px;
+    height: 93px;
+    width: 93px;
+}
+
+
+/* end background  */
+
+form {
+    width: 30%;
+    position: absolute;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--borderRadius);
+    background-color: var(--glassColor);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+
+/* start login header */
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 20px;
+}
+
+.headerContainer div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    width: 80px;
+}
+
+.communityName p {
+    font-size: 22px;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.communityName p:first-child {
+    font-weight: bold;
+}
+
+
+/* end login header */
+
+
+/* start general input style  */
+
+input {
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+    caret-color: white;
+    color: white;
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus+label>* {
+    fill: white;
+}
+
+form label>* {
+    margin: 5px 10px 0;
+}
+
+input:not(:placeholder-shown)+label>* {
+    fill: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.error {
+    border: 2px solid var(--errorColor);
+}
+
+.password,
+.email {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--glassColor);
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.pass,
+.email {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+
+/* end general input style  */
+
+
+/* start input password */
+
+.password {
+    display: flex;
+}
+
+.showHidden {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* end input password */
+
+
+/* start icons */
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: rgb(145, 145, 145);
+}
+
+
+/* end icons */
+
+.loginBtn{
+    width: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+    background-image: linear-gradient(#db4d25, #cb5331);
+    box-shadow: 0 -4px 4px #bd401d inset, 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+}
+
+.home {
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(#db4d25, #cb5331);
+    box-shadow: 0 -4px 4px #bd401d inset, 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+}
+
+.home .icon {
+    fill: #fff;
+}
+.loginBtn:active {
+    transform: scale(0.98);
+}
+
+
+/* start error message  */
+
+.errorBox {
+    height: fit-content;
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.errorMessageContainer {
+    background-color: var(--errorColor);
+    white-space: nowrap;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 10px;
+}
+
+
+/* end error message  */
+
+@media (max-width: 500px) {
+    .background {
+        width: 200px;
+        height: 300px;
+    }
+    .logoImage {
+        width: 60px;
+    }
+    .communityName p {
+        font-size: 19px;
+        margin-left: 10px;
+    }
+    input {
+        font-size: 16px;
+    }
+    
+    .communityName {
+        display: none;
+    }
+
+    .logoImage {
+        width: 50px;
+    }
+}

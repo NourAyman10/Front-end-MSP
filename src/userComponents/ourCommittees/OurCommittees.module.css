@@ -1,0 +1,106 @@
+:root {
+    --mainRed: #f25123;
+    --mainGreen: #7fba00;
+    --mainBlue: #02a3f1;
+    --errorColor: rgba(247, 92, 97, 0.5);
+    --glassColor: rgba(255, 255, 255, 0.07);
+    --borderRadius: 20px;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.container h1 {
+    font-family: "MOAM91";
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 0.25em;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.mainSliderContainer {
+    width: 95%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow-x: scroll;
+    gap: 48px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.leftSliderIcon,
+.rightSliderIcon {
+    cursor: pointer;
+    width: 60px;
+    height: 55px;
+    padding: 10px;
+    fill: var(--mainRed);
+}
+
+.sliderCard {
+    width: 250px;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04), transparent);
+    backdrop-filter: blur(176px);
+    border-radius: 12px;
+    padding: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.sliderCard p {
+    font-family: "MOAM91";
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+@media (max-width: 430px) {
+    .container h1 {
+        font-size: 30px;
+        letter-spacing: 0.25em;
+    }
+    .leftSliderIcon,
+    .rightSliderIcon {
+        display: none;
+    }
+    .slider::-webkit-scrollbar:horizontal {
+        display: block;
+        height: 5px;
+    }
+     ::-webkit-scrollbar-track:horizontal {
+        background-color: #1f1f1f;
+        border-radius: 20px;
+    }
+     ::-webkit-scrollbar-thumb:horizontal {
+        background-color: var(--mainRed);
+        border-radius: 20px;
+    }
+}

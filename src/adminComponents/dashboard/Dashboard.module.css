@@ -1,0 +1,24 @@
+.container {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04), transparent);
+    backdrop-filter: blur(176px);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.container > p {
+    font-family: "MOAM91";
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 30px;
+}
+

@@ -1,0 +1,349 @@
+.comingEventContainer {
+  padding: 0 4%;
+  width: 90vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* start background  */
+.comingEventContainer .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.comingEventContainer .shape {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 -6px 4px rgba(0, 0, 0, 0.12) inset,
+    5px 1px 4px rgba(0, 0, 0, 0.1) inset, 0px 4px 40px #0b2a38;
+  animation-name: floating;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.comingEventContainer .shape:first-child {
+  background-image: linear-gradient(var(--mainRed), #b4300a);
+  left: -20px;
+  top: -20px;
+  height: 26px;
+  width: 26px;
+  animation-duration: 3s;
+}
+.comingEventContainer .shape:nth-child(2) {
+  background-image: linear-gradient(var(--mainGreen), #4b6b05);
+  right: -30px;
+  top: -30px;
+  height: 53px;
+  width: 53px;
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
+
+.comingEventContainer .shape:nth-child(3) {
+  background-image: linear-gradient(var(--mainBlue), #0b6c9d);
+  right: 50px;
+  bottom: -50px;
+  height: 93px;
+  width: 93px;
+  animation-duration: 5s;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* end background  */
+
+/* start logo neon  */
+.comingEventContainer .logoNeon {
+  background-image: url("../../images/LogoNeon/one.svg");
+  background-size: cover;
+  width: 773px;
+  height: 674px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation-name: change-color;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes change-color {
+  0% {
+    background-image: url("../../images/LogoNeon/one.svg");
+  }
+  34% {
+    background-image: url("../../images/LogoNeon/two.svg");
+  }
+  66% {
+    background-image: url("../../images/LogoNeon/three.svg");
+  }
+  100% {
+    background-image: url("../../images/LogoNeon/one.svg");
+  }
+}
+/* end logo neon  */
+
+/* start coming event section  */
+.comingEventContainer main {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comingEventContainer main h1 {
+  font-family: "MOAM91";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.25em;
+  margin: 32px 0 16px 0;
+}
+
+main section {
+  text-align: center;
+}
+
+.comingEventContainer main .ERR {
+  display: inline;
+  background-image: linear-gradient(#db4d25, #cb5331);
+  color: black;
+  padding: 5px 15px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin: 32px 0 16px 0;
+}
+
+
+.comingEventContainer main p.headline {
+  font-family: "MOAM91";
+  text-transform: uppercase;
+  letter-spacing: 0.49em;
+  color: #02a3f1;
+  font-size: 14px;
+}
+
+.comingEventContainer main p.brif {
+  color: #b8b8b8;
+  font-size: 18px;
+}
+
+.comingEventContainer main p.date {
+  color: white;
+  font-family: "MOAM91";
+  font-size: 25px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+.comingEventContainer .buttons {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.comingEventContainer .buttons button {
+  border: none;
+  width: 200px;
+  height: 56px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comingEventContainer .buttons button:first-child {
+  border-radius: 30px;
+  background-image: linear-gradient(#db4d25, #cb5331);
+  box-shadow: 0 -4px 4px #bd401d inset, 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+  color: black;
+}
+
+.comingEventContainer .buttons button:last-child {
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.comingEventContainer .buttons button:last-child:hover {
+  background-color: white;
+  color: black;
+}
+
+/* end coming event section  */
+
+.comingEventContainer .icons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  gap: 50px;
+  padding: 3% 4%;
+}
+
+.comingEventContainer .icons > * {
+  cursor: pointer;
+}
+
+.comingEventContainer .icons img:first-child {
+  width: 17px;
+  height: 32px;
+}
+
+.comingEventContainer .icons img:last-child {
+  width: 32px;
+  height: 32px;
+}
+
+.comingEventContainer .scroll {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.comingEventContainer .scroll img {
+  width: 28px;
+}
+
+.comingEventContainer .scroll p {
+  text-transform: uppercase;
+  color: #373737;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 960px) {
+  .comingEventContainer main h1 {
+    font-size: 50px;
+    letter-spacing: 0.2em;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .comingEventContainer main p:first-of-type {
+    letter-spacing: 0.49em;
+    font-size: 12px;
+  }
+
+  .comingEventContainer main > p:nth-of-type(2) {
+    color: #b8b8b8;
+    font-size: 15px;
+    text-align: center;
+  }
+  .comingEventContainer .logoNeon {
+    width: 460px;
+    height: 374px;
+  }
+
+  .comingEventContainer .background {
+    width: 80%;
+  }
+}
+
+@media (max-width: 479px) {
+  .comingEventContainer main h1 {
+    font-size: 40px;
+    letter-spacing: 0.2em;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .comingEventContainer main p:first-of-type {
+    letter-spacing: 0.49em;
+    font-size: 10px;
+  }
+
+  .comingEventContainer main > p:nth-of-type(2) {
+    color: #b8b8b8;
+    font-size: 12px;
+    width: 300px;
+    text-align: center;
+  }
+  .comingEventContainer .logoNeon {
+    width: 340px;
+    height: 274px;
+  }
+
+  .comingEventContainer .background {
+    width: 60%;
+  }
+
+  .comingEventContainer .buttons button {
+    width: 150px;
+    height: 50px;
+  }
+
+  .comingEventContainer .icons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 359px) {
+  .comingEventContainer main h1 {
+    font-size: 35px;
+    letter-spacing: 0.2em;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .comingEventContainer main p:first-of-type {
+    letter-spacing: 0.49em;
+    font-size: 10px;
+  }
+
+  .comingEventContainer main > p:nth-of-type(2) {
+    color: #b8b8b8;
+    font-size: 12px;
+    width: 300px;
+    text-align: center;
+  }
+  .comingEventContainer .logoNeon {
+    width: 300px;
+    height: 274px;
+  }
+
+  .comingEventContainer .background {
+    width: 60%;
+  }
+
+  .comingEventContainer .buttons button {
+    width: 130px;
+    height: 50px;
+  }
+
+  .comingEventContainer .icons {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,140 @@
+.moreDetailesContainer {
+    min-height: 100vh;
+}
+
+.moreDetailesContainer header {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+.moreDetailesContainer header .imgContainer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: 0% 70%;
+    filter: blur(3px);
+}
+
+.moreDetailesContainer header .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.555), #0c0c0c);
+    padding: 0 5rem 2rem;
+}
+
+.moreDetailesContainer header .overlay .eventIcon {
+    position: relative;
+    width: 350px;
+    height: 200px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 50px;
+    margin-right: 3rem;
+    overflow: hidden;
+    border: 3px solid #db4d25;
+}
+
+.moreDetailesContainer header .overlay .eventHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+}
+
+.moreDetailesContainer header .overlay .eventHeader h2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #cb5331;
+}
+
+.moreDetailesContainer header .overlay .eventHeader h2 span {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    border: 2px solid #cb5331;
+    border-radius: 3rem;
+    padding: 5px 20px;
+    margin-left: 20px;
+    text-transform: uppercase;
+}
+
+.moreDetailesContainer header .overlay .eventHeader p {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.moreDetailesContainer section.details {
+    padding: 0 5rem;
+}
+
+.moreDetailesContainer section.details div {
+    font-size: 1.2rem;
+}
+
+.moreDetailesContainer .registerBtn {
+    border-radius: 50px;
+    background-image: linear-gradient(#db4d25, #cb5331);
+    box-shadow: 0 -4px 4px #bd401d inset, 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 2;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .moreDetailesContainer header .overlay .eventHeader h2 {
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .moreDetailesContainer header .overlay .eventHeader h2 span {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 430px) {
+    .moreDetailesContainer header .overlay {
+        padding: 10px 20px;
+    }
+
+    .moreDetailesContainer header .overlay .eventIcon {
+        display: none;
+    }
+
+    .moreDetailesContainer header .overlay .eventHeader h2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .moreDetailesContainer header .overlay .eventHeader p {
+        font-size: 1.5rem;
+    }
+
+    .moreDetailesContainer .registerBtn {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .moreDetailesContainer header {
+        margin-bottom: 3rem;
+    }
+
+    .moreDetailesContainer section.details {
+        padding: 0 3rem;
+    }
+}

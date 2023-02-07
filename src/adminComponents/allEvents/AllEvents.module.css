@@ -1,0 +1,44 @@
+.background {
+    position: absolute;
+    height: 100vh;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    width: 80%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04), transparent);
+    backdrop-filter: blur(176px);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.shape {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 -6px 4px rgba(0, 0, 0, 0.12) inset, 5px 1px 4px rgba(0, 0, 0, 0.10) inset;
+}
+
+.shape:first-child {
+    background-image: linear-gradient(var(--mainRed), #b4300a);
+    right: 30%;
+    top: -10px;
+    height: 26px;
+    width: 26px;
+}
+
+.shape:nth-child(2) {
+    background-image: linear-gradient(var(--mainGreen), #4b6b05);
+    right: -30px;
+    top: 150px;
+    height: 53px;
+    width: 53px;
+}
+
+.shape:nth-child(3) {
+    background-image: linear-gradient(var(--mainBlue), #0b6c9d);
+    left: -60px;
+    top: 40px;
+    height: 93px;
+    width: 93px;
+}

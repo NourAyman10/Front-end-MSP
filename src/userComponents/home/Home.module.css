@@ -1,0 +1,183 @@
+.about {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4em;
+}
+
+.about .details {
+    padding-right: 3rem;
+    width: 50%;
+}
+
+.about .details h4 {
+    font-family: "MOAM91";
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #02a3f1;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.49em;
+}
+
+.about .details h4::before {
+    display: inline-block;
+    content: "";
+    background-color: #02a3f1;
+    width: 20px;
+    height: 1px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.about .details h5 {
+    font-family: "MOAM91";
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 10px 0 30px;
+    letter-spacing: 0.16em;
+}
+
+.about .details p {
+    font-size: 1rem;
+    color: #b8b8b8;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: 200%;
+}
+
+.about .learnMore {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+
+.about .learnMore span {
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+.about .learnMore .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #373737;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.about .learnMore .icon:hover {
+    fill: #0c0c0c;
+    background-color: white;
+    border: none;
+}
+
+.about .logoIMG {
+    width: 100%;
+}
+
+
+/* start background  */
+
+.about .backgroundAboutUs {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.about .shape {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 -6px 4px rgba(0, 0, 0, 0.12) inset, 5px 1px 4px rgba(0, 0, 0, 0.1) inset, 0px 4px 40px #0b2a38;
+    animation-name: floating;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.about .shape:first-child {
+    background-image: linear-gradient(var(--mainRed), #b4300a);
+    left: -20px;
+    top: -20px;
+    height: 26px;
+    width: 26px;
+    animation-duration: 3s;
+}
+
+.about .shape:nth-child(2) {
+    background-image: linear-gradient(var(--mainGreen), #4b6b05);
+    right: -30px;
+    top: -30px;
+    height: 53px;
+    width: 53px;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}
+
+.about .shape:nth-child(3) {
+    background-image: linear-gradient(var(--mainBlue), #0b6c9d);
+    right: 50px;
+    bottom: -50px;
+    height: 93px;
+    width: 93px;
+    animation-duration: 5s;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* end background  */
+
+@media (max-width: 860px) {
+    .about {
+        padding: 0 1em;
+    }
+    .about .logoIMG {
+        display: none;
+    }
+    .about .backgroundAboutUs {
+        display: block;
+        width: 80%;
+        height: 50%;
+    }
+    .about .details {
+        padding: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 515px) {
+    .about .backgroundAboutUs {
+        height: 80%;
+    }
+    .about {
+        padding: 0 1em;
+    }
+    .about .details {
+        padding: 3rem 0;
+        width: 100%;
+    }
+    .about .details h5 {
+        margin: 10px 0 30px;
+    }
+}
